@@ -1,6 +1,11 @@
+import "./globals.css"
+import Todo_Input from "./Todo_Input.js"
 const page=()=>{
     return(
-        <h1>Hello</h1>
+        <>
+            <Todo_Input/>
+        </>
+        
     )
 }
 export default page;
