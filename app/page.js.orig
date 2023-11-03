@@ -1,14 +1,4 @@
 <<<<<<< HEAD
-import Todoinput from "./Todoinput.js";
-const page=()=>{
-    return(
-        <div className="main-container">
-            <Todoinput  />
-        </div>
-    )
-}
-export default page;
-=======
 
 import Priority_box from "./priority_box.js";
 import Time_box from "./time_box.js";
@@ -24,4 +14,16 @@ const Page=()=>{
     );
 };
 export default Page;
->>>>>>> 5b8ccc6ef4c7e5c38e2e707c58fb95462ec753b1
+=======
+import "./globals.css"
+import Todo_Input from "./Todo_Input.js"
+const page=()=>{
+    return(
+        <>
+            <Todo_Input/>
+        </>
+        
+    )
+}
+export default page;
+>>>>>>> 2543faaf3a9b567d8b367b48d7fe374c2bb08958
