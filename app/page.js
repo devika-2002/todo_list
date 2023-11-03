@@ -1,6 +1,9 @@
+import Todoinput from "./Todoinput.js";
 const page=()=>{
     return(
-        <h1>Hello</h1>
+        <div className="main-container">
+            <Todoinput  />
+        </div>
     )
 }
 export default page;
