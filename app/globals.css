@@ -1,13 +1,39 @@
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 75px;
-}
-
-.input-wrapper {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input-wrapper {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.time-input-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.task-table {
+  margin-top: 20px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+
 
