@@ -1,27 +1,25 @@
-<<<<<<< HEAD
-import Todoinput from "./Todoinput.js";
+"use client"
+import {useState} from "react";
+import TodoInput from "./TodoInput";
+import TodoTable from "./TodoTable";
+import "./globals.css";
+
 const page=()=>{
+    const [data, setData] = useState([]);
+
+    const addTask = (newTask) => {
+      setData([...data, newTask]);
+    };
+  
+    const deleteTask = (id) => {
+      const updatedTasks = data.filter((task, index) => index !== id);
+      setData(updatedTasks);
+    };
     return(
         <div className="main-container">
-            <Todoinput  />
+            <TodoInput AddTask={addTask} />
+            <TodoTable datas={data} deleteTask={deleteTask}/>
         </div>
     )
 }
 export default page;
-=======
-
-import Priority_box from "./priority_box.js";
-import Time_box from "./time_box.js";
-import Input_box from "./Input_box.js";
-
-const Page=()=>{
-    return(
-    	<>
-        	<Priority_box/>
-        	<Time_box/>
-        	<Input_box/>
-        </>
-    );
-};
-export default Page;
->>>>>>> 5b8ccc6ef4c7e5c38e2e707c58fb95462ec753b1
