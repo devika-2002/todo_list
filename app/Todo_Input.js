@@ -29,7 +29,7 @@ const TodoInput = () => {
         isDone: false,
       };
       
-      setTasks[...tasks, newTask];
+      setTasks([...tasks, newTask]);
       setTask('');
       setPriority('');
       setTime('');
