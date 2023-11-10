@@ -16,7 +16,7 @@ const TodoInput = () => {
   };
 
   const handleTimeChange = (e) => {
-    setTime(e.target.value);
+    setHours(e.target.value);
   };
 
   const handleAddTask = () => {
@@ -47,11 +47,12 @@ const TodoInput = () => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
   };
+  const sortedTasks = tasks.sort((a, b) => +a.priority - +b.priority);
+
+
 
   return (
-    <div className="container">
-        <h2>Todo List</h2>
-        <div className="input-container">
+    <div>
             <div className="input-wrapper">
                 <label htmlFor="taskInput">Task:</label>
                 <input
@@ -67,30 +68,37 @@ const TodoInput = () => {
                 <select 
                     id="prioritySelect" 
                     value={priority} 
-                    onChange={handlePriorityChange}>
+                    onChange={handlePriorityChange}
+                >
+                    <option value="">Select Priority</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                </select>
+               </select>
             </div>
             <div className="time-input-container">
-                <label htmlFor="timeInput">Time:</label>
-                <input type="time" id="timeInput" value={time} onChange={handleTimeChange} />
+                <label htmlFor="timeInput">Hours:</label>
+                <input
+                    type="time"
+                    className="time-input"
+                    placeholder="time"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                />
             </div>
-            <button onClick={handleAddTask}>Add Task</button>
-        </div>
+            <button className="add_button" onClick={handleAddTask}>Add Task</button>
         <table className="task-table" border="1">
             <thead>
                 <tr>
                     <th>Task</th>
                     <th>Priority</th>
-                    <th>Time</th>
+                    <th>Hours</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {tasks.map((task) => (
+                {sortedTasks.map((task) => (
                     <tr key={task.id}>
                       <td style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>{task.task}</td>
                       <td style={{ textDecoration: task.isDone ? 'line-through' : 'none' }}>{task.priority}</td>

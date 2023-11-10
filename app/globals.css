@@ -1,38 +1,49 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body{
+   background-color: aliceblue; 
+   padding-top:20px;
 }
+.main-container{
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    background-color:white;
+    width:600px;
+    margin:auto;
+    padding-top:15px;
+ }
 
 .input-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  margin:auto;
+  padding-top:2px;
+  
+  
 }
 
 .input-wrapper {
-  margin: 0 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin:auto;
+  padding-top:5px;
 }
 
 .select-container {
   display: flex;
-  align-items: center;
-  margin-top: 20px;
+  margin:auto;
+  padding-top:5px;
 }
 
 .time-input-container {
   display: flex;
-  justify-content: center;
-  margin: 15px 0;
+  margin:auto;
+  padding-top:5px;
 }
-
+.add_button{
+    display: flex;
+    margin-top:5px;
+    margin-left:40px;
+}
 .task-table {
-  margin-top: 20px;
-  border: 1px solid black;
-  width: 100%;
+  padding-top:10px;
 }
 
 
