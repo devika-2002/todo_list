@@ -15,9 +15,11 @@ const page=()=>{
       const updatedTasks = data.filter((task, index) => index !== id);
       setData(updatedTasks);
     };
+    
     return(
         <div className="main-container">
-            <TodoInput AddTask={addTask} />
+            <h1>Todo list</h1>
+            <TodoInput AddTask={addTask}  />
             <TodoTable datas={data} deleteTask={deleteTask}/>
         </div>
     )

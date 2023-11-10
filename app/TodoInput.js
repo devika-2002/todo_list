@@ -28,14 +28,14 @@ const  TodoInput=({AddTask})=>{
     };
 
     return (
-        <div>
+        <div className="box">
             <input className='input-text' type='text' placeholder='Enter your task'
             value={inputText}
             onChange={handleInputChange}
             />
 
             <select className="select-dropdown" value={priority} onChange={handlePriorityChange}>
-                <option disabled>Select Priority</option>
+                <option value="">Select Priority</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
